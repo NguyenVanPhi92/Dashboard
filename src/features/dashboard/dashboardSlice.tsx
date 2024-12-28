@@ -1,24 +1,24 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit'
 
 type SidebarState = {
-  isSidebarOpen: boolean;
-};
+    isSidebarOpen: boolean
+}
 
 const initialState: SidebarState = {
-  isSidebarOpen: true,
-};
+    isSidebarOpen: true
+}
 
 export const dashboardSlice = createSlice({
-  name: "dashboard",
-  // `createSlice` will infer the state type from the `initialState` argument
-  initialState,
-  reducers: {
-    setSidebar: (state) => {
-      state.isSidebarOpen = !state.isSidebarOpen;
-    },
-  },
-});
+    name: 'dashboard',
+    // `createSlice` will infer the state type from the `initialState` argument
+    initialState,
+    reducers: {
+        setSidebar: (state) => {
+            state.isSidebarOpen = !state.isSidebarOpen
+        }
+    }
+})
 
-export const { setSidebar } = dashboardSlice.actions;
+export const { setSidebar } = dashboardSlice.actions
 
-export default dashboardSlice.reducer;
+export default dashboardSlice.reducer

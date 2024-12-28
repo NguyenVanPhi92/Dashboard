@@ -5,7 +5,7 @@
 // Version: 1.0
 // Component call:
 {
-  /* <Welcome>
+    /* <Welcome>
   <Welcome.Title>Good evening, Sherwood 😀</Welcome.Title>
   <Welcome.Description>
     Here is the complete overview of your eCommerce store. Analyze the
@@ -21,44 +21,40 @@
 // *********************
 
 const Welcome = ({ children }: { children: React.ReactNode }) => {
-  return <div className="flex flex-col gap-y-4 py-7">{children}</div>;
-};
+    return <div className='flex flex-col gap-y-4 py-7'>{children}</div>
+}
 
 const Title = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <h3 className="dark:text-whiteSecondary text-blackPrimary text-3xl font-bold">
-      {children}
-    </h3>
-  );
-};
+    return (
+        <h3 className='text-3xl font-bold dark:text-whiteSecondary text-blackPrimary'>
+            {children}
+        </h3>
+    )
+}
 
 const Description = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <p className="text-xl dark:text-whiteSecondary text-blackPrimary">
-      {children}
-    </p>
-  );
-};
+    return <p className='text-xl dark:text-whiteSecondary text-blackPrimary'>{children}</p>
+}
 
 const ActionButton = ({
-  children,
-  onClick,
+    children,
+    onClick
 }: {
-  children: React.ReactNode;
-  onClick: () => void;
+    children: React.ReactNode
+    onClick: () => void
 }) => {
-  return (
-    <button
-      onClick={onClick}
-      className="dark:bg-whiteSecondary bg-blackPrimary dark:text-blackPrimary text-whiteSecondary w-60 py-3 font-semibold text-lg dark:hover:bg-white hover:bg-black duration-200"
-    >
-      {children}
-    </button>
-  );
-};
+    return (
+        <button
+            onClick={onClick}
+            className='py-3 text-lg font-semibold duration-200 dark:bg-whiteSecondary bg-blackPrimary dark:text-blackPrimary text-whiteSecondary w-60 dark:hover:bg-white hover:bg-black'
+        >
+            {children}
+        </button>
+    )
+}
 
-Welcome.Title = Title;
-Welcome.Description = Description;
-Welcome.ActionButton = ActionButton;
+Welcome.Title = Title
+Welcome.Description = Description
+Welcome.ActionButton = ActionButton
 
-export default Welcome;
+export default Welcome
