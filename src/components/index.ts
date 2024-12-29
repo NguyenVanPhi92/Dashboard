@@ -29,4 +29,6 @@ export { default as SingleStatsV2 } from './SingleStatsV2'
 export { default as TotalSavings } from './TotalSavings'
 export { default as SingleProgressElementTotalSavings } from './SingleProgressElementTotalSavings'
 export { default as ThirdPartyAuthButton } from './ThirdPartyAuthButton'
-// export { default as LoginComponent } from './LoginComponent'
+
+///
+export * from './login'

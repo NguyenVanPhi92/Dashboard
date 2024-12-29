@@ -1,3 +1,1 @@
-import LoginComponent from './LoginComponent'
-
-export default LoginComponent
+export * from './LoginComponent'

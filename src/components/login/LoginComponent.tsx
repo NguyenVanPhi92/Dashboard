@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom'
 import { FaArrowRight } from 'react-icons/fa6'
 import { useState } from 'react'
 
-const LoginComponent = () => {
+export const LoginComponent = () => {
     const [email, setEmail] = useState('john@email.com')
     const [password, setPassword] = useState('pass1234567890')
     return (
@@ -80,5 +80,3 @@ const LoginComponent = () => {
         </div>
     )
 }
-
-export default LoginComponent

@@ -4,6 +4,7 @@ type DarkModeState = {
     darkMode: boolean
 }
 
+// Function trả vê giá trị boolean của darkMode
 const setDarkMode = (): boolean => {
     if (
         localStorage.theme === 'dark' ||
@@ -26,7 +27,7 @@ export const darkModeSlice = createSlice({
     // `createSlice` will infer the state type from the `initialState` argument
     initialState,
     reducers: {
-        toggleDarkMode: (state) => {
+        toggleDarkMode: state => {
             if (state.darkMode) {
                 document.documentElement.classList.remove('dark')
                 localStorage.theme = 'light'

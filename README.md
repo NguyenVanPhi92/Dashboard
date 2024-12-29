@@ -51,7 +51,6 @@ npm run dev
 
 <p>5. To see your app go to your browser of choice and in the URL write: <a href="http://localhost:5173">http://localhost:5173</a></p>
 
-
 ![landing black](https://github.com/Kuzma02/Free-Admin-Dashboard/assets/138793624/d0351603-0aa1-4c5c-8520-fcce064be708)
 
 ![landing white](https://github.com/Kuzma02/Free-Admin-Dashboard/assets/138793624/6d2e522d-7c08-4a28-bdb9-7e4511a75dd4)
