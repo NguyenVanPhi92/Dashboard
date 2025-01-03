@@ -20,5 +20,4 @@ export const dashboardSlice = createSlice({
 })
 
 export const { setSidebar } = dashboardSlice.actions
-
 export default dashboardSlice.reducer

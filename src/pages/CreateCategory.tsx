@@ -46,25 +46,15 @@ const CreateCategory = () => {
 
                             <div className='flex flex-col gap-5 mt-4'>
                                 <InputWithLabel label='Category title'>
-                                    <SimpleInput
-                                        type='text'
-                                        placeholder='Enter a category title...'
-                                    />
+                                    <SimpleInput type='text' placeholder='Enter a category title...' />
                                 </InputWithLabel>
 
                                 <InputWithLabel label='Category description'>
-                                    <TextAreaInput
-                                        placeholder='Enter a category description...'
-                                        rows={4}
-                                        cols={50}
-                                    />
+                                    <TextAreaInput placeholder='Enter a category description...' rows={4} cols={50} />
                                 </InputWithLabel>
 
                                 <InputWithLabel label='Category slug'>
-                                    <SimpleInput
-                                        type='text'
-                                        placeholder='Enter a category slug...'
-                                    />
+                                    <SimpleInput type='text' placeholder='Enter a category slug...' />
                                 </InputWithLabel>
 
                                 <InputWithLabel label='Parent category (optional)'>
@@ -80,11 +70,7 @@ const CreateCategory = () => {
                                 </InputWithLabel>
 
                                 <InputWithLabel label='Meta description'>
-                                    <TextAreaInput
-                                        placeholder='Enter a meta description...'
-                                        rows={4}
-                                        cols={50}
-                                    />
+                                    <TextAreaInput placeholder='Enter a meta description...' rows={4} cols={50} />
                                 </InputWithLabel>
                             </div>
                         </div>

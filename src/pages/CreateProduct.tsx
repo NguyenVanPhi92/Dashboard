@@ -48,18 +48,11 @@ const CreateProduct = () => {
 
                             <div className='flex flex-col gap-5 mt-4'>
                                 <InputWithLabel label='Title'>
-                                    <SimpleInput
-                                        type='text'
-                                        placeholder='Enter a product title...'
-                                    />
+                                    <SimpleInput type='text' placeholder='Enter a product title...' />
                                 </InputWithLabel>
 
                                 <InputWithLabel label='Description'>
-                                    <TextAreaInput
-                                        placeholder='Enter a product description...'
-                                        rows={4}
-                                        cols={50}
-                                    />
+                                    <TextAreaInput placeholder='Enter a product description...' rows={4} cols={50} />
                                 </InputWithLabel>
 
                                 <InputWithLabel label='Category'>
@@ -74,33 +67,21 @@ const CreateProduct = () => {
                             <div className='flex flex-col gap-5 mt-4'>
                                 <div className='grid grid-cols-2 gap-x-5 max-[500px]:grid-cols-1 max-[500px]:gap-x-0 max-[500px]:gap-y-5'>
                                     <InputWithLabel label='Base pricing'>
-                                        <SimpleInput
-                                            type='number'
-                                            placeholder='Enter a product base pricing...'
-                                        />
+                                        <SimpleInput type='number' placeholder='Enter a product base pricing...' />
                                     </InputWithLabel>
 
                                     <InputWithLabel label='Price with dicount'>
-                                        <SimpleInput
-                                            type='number'
-                                            placeholder='Enter a price with discount...'
-                                        />
+                                        <SimpleInput type='number' placeholder='Enter a price with discount...' />
                                     </InputWithLabel>
                                 </div>
 
                                 <div className='grid grid-cols-2 gap-x-5 max-[500px]:grid-cols-1 max-[500px]:gap-x-0 max-[500px]:gap-y-5'>
                                     <InputWithLabel label='Stock'>
-                                        <SimpleInput
-                                            type='number'
-                                            placeholder='Enter a product stock...'
-                                        />
+                                        <SimpleInput type='number' placeholder='Enter a product stock...' />
                                     </InputWithLabel>
 
                                     <InputWithLabel label='SKU'>
-                                        <SimpleInput
-                                            type='text'
-                                            placeholder='Enter a product SKU...'
-                                        />
+                                        <SimpleInput type='text' placeholder='Enter a product SKU...' />
                                     </InputWithLabel>
                                 </div>
                                 <InputWithLabel label='Stock status'>
@@ -115,28 +96,16 @@ const CreateProduct = () => {
                             <div className='flex flex-col gap-5 mt-4'>
                                 <div className='grid grid-cols-2 gap-x-5 gap-y-5 max-[500px]:grid-cols-1 max-[500px]:gap-x-0 max-[500px]:gap-y-5'>
                                     <InputWithLabel label='Weight (kg)'>
-                                        <SimpleInput
-                                            type='number'
-                                            placeholder='Enter a product weight...'
-                                        />
+                                        <SimpleInput type='number' placeholder='Enter a product weight...' />
                                     </InputWithLabel>
                                     <InputWithLabel label='Length (cm)'>
-                                        <SimpleInput
-                                            type='number'
-                                            placeholder='Enter a product length...'
-                                        />
+                                        <SimpleInput type='number' placeholder='Enter a product length...' />
                                     </InputWithLabel>
                                     <InputWithLabel label='Width (cm)'>
-                                        <SimpleInput
-                                            type='number'
-                                            placeholder='Enter a product width...'
-                                        />
+                                        <SimpleInput type='number' placeholder='Enter a product width...' />
                                     </InputWithLabel>
                                     <InputWithLabel label='Height (cm)'>
-                                        <SimpleInput
-                                            type='number'
-                                            placeholder='Enter a product height...'
-                                        />
+                                        <SimpleInput type='number' placeholder='Enter a product height...' />
                                     </InputWithLabel>
                                 </div>
                             </div>
@@ -147,18 +116,11 @@ const CreateProduct = () => {
 
                                 <div className='flex flex-col gap-5 mt-4'>
                                     <InputWithLabel label='Meta title'>
-                                        <SimpleInput
-                                            type='text'
-                                            placeholder='Enter a meta title...'
-                                        />
+                                        <SimpleInput type='text' placeholder='Enter a meta title...' />
                                     </InputWithLabel>
 
                                     <InputWithLabel label='Meta description'>
-                                        <TextAreaInput
-                                            placeholder='Enter a meta description...'
-                                            rows={4}
-                                            cols={50}
-                                        />
+                                        <TextAreaInput placeholder='Enter a meta description...' rows={4} cols={50} />
                                     </InputWithLabel>
                                 </div>
                             </div>
