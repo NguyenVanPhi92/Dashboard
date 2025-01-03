@@ -1,0 +1,182 @@
++-----------------+       +-----------------+       +-----------------+
+|     User        |       |   Customer      |       |   Categories    |
++-----------------+       +-----------------+       +-----------------+
+| user_id (PK)    |<------| user_id (FK)    |       | category_id (PK)|
+| username        |       | customer_id (PK)|       | category_name   |
+| password        |       | first_name      |       | description     |
+| email           |       | last_name       |       | created_at      |
+| role            |       | phone_number    |       | updated_at      |
+| created_at      |       | address         |       +-----------------+
+| updated_at      |       | created_at      |               |
++-----------------+       | updated_at      |               |
+                          +-----------------+               |
+                                  |                         |
+                                  |                         |
+                          +-----------------+               |
+                          |     Products    |<--------------+
+                          +-----------------+
+                          | product_id (PK) |
+                          | category_id (FK)|
+                          | product_name    |
+                          | description     |
+                          | price           |
+                          | stock_quantity  |
+                          | created_at      |
+                          | updated_at      |
+                          +-----------------+
+                                  |
+                                  |
+                          +-----------------+
+                          |     Reviews     |
+                          +-----------------+
+                          | review_id (PK)  |
+                          | product_id (FK) |
+                          | customer_id (FK)|
+                          | rating          |
+                          | comment         |
+                          | created_at      |
+                          | updated_at      |
+                          +-----------------+
+                                  |
+                                  |
+                          +-----------------+
+                          |     Order       |
+                          +-----------------+
+                          | order_id (PK)   |
+                          | customer_id (FK)|
+                          | order_date      |
+                          | total_amount    |
+                          | status          |
+                          | created_at      |
+                          | updated_at      |
+                          +-----------------+
+                                  |
+                                  |
+                          +-----------------+
+                          | Order_Details   |
+                          +-----------------+
+                          | order_detail_id |
+                          | order_id (FK)   |
+                          | product_id (FK) |
+                          | quantity        |
+                          | price           |
+                          | created_at      |
+                          | updated_at      |
+                          +-----------------+
+                                  |
+                                  |
+                          +-----------------+
+                          |     Payment     |
+                          +-----------------+
+                          | payment_id (PK) |
+                          | order_id (FK)   |
+                          | payment_method  |
+                          | amount          |
+                          | status          |
+                          | transaction_id  |
+                          | created_at      |
+                          | updated_at      |
+                          +-----------------+
+                                  |
+                                  |
+                          +-----------------+
+                          |     Shipping    |
+                          +-----------------+
+                          | shipping_id (PK)|
+                          | order_id (FK)   |
+                          | shipping_method |
+                          | shipping_address|
+                          | status          |
+                          | tracking_number |
+                          | created_at      |
+                          | updated_at      |
+                          +-----------------+
+                                  |
+                                  |
+                          +-----------------+
+                          |   Warehouse     |
+                          +-----------------+
+                          | warehouse_id (PK)|
+                          | warehouse_name  |
+                          | address         |
+                          | phone_number    |
+                          | created_at      |
+                          | updated_at      |
+                          +-----------------+
+                                  |
+                                  |
+                          +-----------------+
+                          |    Inventory    |
+                          +-----------------+
+                          | inventory_id (PK)|
+                          | product_id (FK) |
+                          | warehouse_id (FK)|
+                          | quantity        |
+                          | created_at      |
+                          | updated_at      |
+                          +-----------------+
+                                  |
+                                  |
+                          +-----------------+
+                          |   Promotions    |
+                          +-----------------+
+                          | promotion_id (PK)|
+                          | promotion_name  |
+                          | description     |
+                          | discount_type   |
+                          | discount_value  |
+                          | start_date      |
+                          | end_date        |
+                          | created_at      |
+                          | updated_at      |
+                          +-----------------+
+                                  |
+                                  |
+                          +-----------------+
+                          |Product_Promotions|
+                          +-----------------+
+                          | product_promotion_id (PK)|
+                          | product_id (FK) |
+                          | promotion_id (FK)|
+                          | created_at      |
+                          | updated_at      |
+                          +-----------------+
+                                  |
+                                  |
+                          +-----------------+
+                          |    Wishlist     |
+                          +-----------------+
+                          | wishlist_id (PK)|
+                          | customer_id (FK)|
+                          | product_id (FK) |
+                          | created_at      |
+                          | updated_at      |
+                          +-----------------+
+                                  |
+                                  |
+                          +-----------------+
+                          |    Analytics    |
+                          +-----------------+
+                          | analytics_id (PK)|
+                          | product_id (FK) |
+                          | customer_id (FK)|
+                          | action_type     |
+                          | action_date     |
+                          | created_at      |
+                          | updated_at      |
+                          +-----------------+
+1. User: Lưu trữ thông tin người dùng (admin và customer).
+2. Customer: Lưu trữ thông tin chi tiết của khách hàng, liên kết với bảng User.
+3. Categories: Lưu trữ danh mục sản phẩm.
+4. Products: Lưu trữ thông tin sản phẩm, liên kết với bảng Categories.
+5. Reviews: Lưu trữ đánh giá của khách hàng về sản phẩm, liên kết với bảng Products và Customer.
+6. Order: Lưu trữ thông tin đơn hàng, liên kết với bảng Customer.
+7. Order_Details: Lưu trữ chi tiết các sản phẩm trong đơn hàng, liên kết với bảng Order và Products.
+8. Payment: Lưu trữ thông tin thanh toán của đơn hàng, liên kết với bảng Order.
+9. Shipping: Lưu trữ thông tin vận chuyển của đơn hàng, liên kết với bảng Order.
+10. Warehouse: Lưu trữ thông tin về các kho hàng.
+11. Inventory: Lưu trữ số lượng sản phẩm trong từng kho hàng, liên kết với bảng Products và Warehouse.
+12. Promotions: Lưu trữ thông tin về các chương trình khuyến mãi.
+13. Product_Promotions: Liên kết sản phẩm với các chương trình khuyến mãi, liên kết với bảng Products và Promotions.
+14. Wishlist: Lưu trữ danh sách sản phẩm yêu thích của khách hàng, liên kết với bảng Customer và Products.
+15. Analytics: Lưu trữ dữ liệu phân tích về hành vi khách hàng, liên kết với bảng Products và Customer.
