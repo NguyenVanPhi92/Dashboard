@@ -46,6 +46,6 @@
         "paths": {
             "@/*": ["src/*"]
         }
-    },
-    "include": ["src", "server/server.js"]
+    }
+    // "include": ["src", "server/server.mjs"]
 }
