@@ -21,7 +21,7 @@ import { useAppDispatch, useAppSelector } from '../hooks'
 const Sidebar = () => {
     const [isLandingOpen, setIsLandingOpen] = useState(false)
     const [isAuthOpen, setIsAuthOpen] = useState(false)
-    const { isSidebarOpen } = useAppSelector((state) => state.dashboard)
+    const { isSidebarOpen } = useAppSelector(state => state.dashboard)
     const dispatch = useAppDispatch()
 
     // Determine the sidebar class based on isSidebarOpen
@@ -53,9 +53,7 @@ const Sidebar = () => {
                         <div>
                             <NavLink
                                 to='/'
-                                className={(isActiveObj) =>
-                                    isActiveObj.isActive ? navActiveClass : navInactiveClass
-                                }
+                                className={isActiveObj => (isActiveObj.isActive ? navActiveClass : navInactiveClass)}
                             >
                                 <HiOutlineHome className='text-xl' />
                                 <span className='text-lg'>Overview v1</span>
@@ -63,9 +61,7 @@ const Sidebar = () => {
 
                             <NavLink
                                 to='/landing-v2'
-                                className={(isActiveObj) =>
-                                    isActiveObj.isActive ? navActiveClass : navInactiveClass
-                                }
+                                className={isActiveObj => (isActiveObj.isActive ? navActiveClass : navInactiveClass)}
                             >
                                 <HiOutlineHome className='text-xl' />
                                 <span className='text-lg'>Overview v2</span>
@@ -75,49 +71,95 @@ const Sidebar = () => {
 
                     <NavLink
                         to='/products'
-                        className={(isActiveObj) =>
-                            isActiveObj.isActive ? navActiveClass : navInactiveClass
-                        }
+                        className={isActiveObj => (isActiveObj.isActive ? navActiveClass : navInactiveClass)}
                     >
                         <HiOutlineDevicePhoneMobile className='text-xl' />
                         <span className='text-lg'>Products</span>
                     </NavLink>
                     <NavLink
                         to='/categories'
-                        className={(isActiveObj) =>
-                            isActiveObj.isActive ? navActiveClass : navInactiveClass
-                        }
+                        className={isActiveObj => (isActiveObj.isActive ? navActiveClass : navInactiveClass)}
                     >
                         <HiOutlineTag className='text-xl' />
                         <span className='text-lg'>Categories</span>
                     </NavLink>
                     <NavLink
                         to='/orders'
-                        className={(isActiveObj) =>
-                            isActiveObj.isActive ? navActiveClass : navInactiveClass
-                        }
+                        className={isActiveObj => (isActiveObj.isActive ? navActiveClass : navInactiveClass)}
                     >
                         <HiOutlineTruck className='text-xl' />
                         <span className='text-lg'>Orders</span>
                     </NavLink>
                     <NavLink
                         to='/users'
-                        className={(isActiveObj) =>
-                            isActiveObj.isActive ? navActiveClass : navInactiveClass
-                        }
+                        className={isActiveObj => (isActiveObj.isActive ? navActiveClass : navInactiveClass)}
                     >
                         <HiOutlineUser className='text-xl' />
                         <span className='text-lg'>Users</span>
                     </NavLink>
                     <NavLink
                         to='/reviews'
-                        className={(isActiveObj) =>
-                            isActiveObj.isActive ? navActiveClass : navInactiveClass
-                        }
+                        className={isActiveObj => (isActiveObj.isActive ? navActiveClass : navInactiveClass)}
                     >
                         <HiOutlineStar className='text-xl' />
                         <span className='text-lg'>Reviews</span>
                     </NavLink>
+                    {/* <NavLink
+                        to='/reviews'
+                        className={isActiveObj => (isActiveObj.isActive ? navActiveClass : navInactiveClass)}
+                    >
+                        <HiOutlineStar className='text-xl' />
+                        <span className='text-lg'>Payment</span>
+                    </NavLink>
+                    <NavLink
+                        to='/reviews'
+                        className={isActiveObj => (isActiveObj.isActive ? navActiveClass : navInactiveClass)}
+                    >
+                        <HiOutlineStar className='text-xl' />
+                        <span className='text-lg'>Shipping</span>
+                    </NavLink>
+                    <NavLink
+                        to='/reviews'
+                        className={isActiveObj => (isActiveObj.isActive ? navActiveClass : navInactiveClass)}
+                    >
+                        <HiOutlineStar className='text-xl' />
+                        <span className='text-lg'>Warehouse</span>
+                    </NavLink>
+                    <NavLink
+                        to='/reviews'
+                        className={isActiveObj => (isActiveObj.isActive ? navActiveClass : navInactiveClass)}
+                    >
+                        <HiOutlineStar className='text-xl' />
+                        <span className='text-lg'>Inventory</span>
+                    </NavLink>
+                    <NavLink
+                        to='/reviews'
+                        className={isActiveObj => (isActiveObj.isActive ? navActiveClass : navInactiveClass)}
+                    >
+                        <HiOutlineStar className='text-xl' />
+                        <span className='text-lg'>Promotions</span>
+                    </NavLink>
+                    <NavLink
+                        to='/reviews'
+                        className={isActiveObj => (isActiveObj.isActive ? navActiveClass : navInactiveClass)}
+                    >
+                        <HiOutlineStar className='text-xl' />
+                        <span className='text-lg'>Product_Promotions</span>
+                    </NavLink>
+                    <NavLink
+                        to='/reviews'
+                        className={isActiveObj => (isActiveObj.isActive ? navActiveClass : navInactiveClass)}
+                    >
+                        <HiOutlineStar className='text-xl' />
+                        <span className='text-lg'>Wishlist</span>
+                    </NavLink>
+                    <NavLink
+                        to='/reviews'
+                        className={isActiveObj => (isActiveObj.isActive ? navActiveClass : navInactiveClass)}
+                    >
+                        <HiOutlineStar className='text-xl' />
+                        <span className='text-lg'>Analytics</span>
+                    </NavLink> */}
 
                     <div
                         onClick={() => setIsAuthOpen(() => !isAuthOpen)}
@@ -130,18 +172,14 @@ const Sidebar = () => {
                         <div>
                             <NavLink
                                 to='/login'
-                                className={(isActiveObj) =>
-                                    isActiveObj.isActive ? navActiveClass : navInactiveClass
-                                }
+                                className={isActiveObj => (isActiveObj.isActive ? navActiveClass : navInactiveClass)}
                             >
                                 <HiLogin className='text-xl' />
                                 <span className='text-lg'>Login</span>
                             </NavLink>
                             <NavLink
                                 to='/register'
-                                className={(isActiveObj) =>
-                                    isActiveObj.isActive ? navActiveClass : navInactiveClass
-                                }
+                                className={isActiveObj => (isActiveObj.isActive ? navActiveClass : navInactiveClass)}
                             >
                                 <HiUserGroup className='text-xl' />
                                 <span className='text-lg'>Register</span>
@@ -153,9 +191,7 @@ const Sidebar = () => {
                 <div className='absolute bottom-0 w-full border-t border-1 dark:border-blackSecondary border-blackSecondary'>
                     <NavLink
                         to='/help-desk'
-                        className={(isActiveObj) =>
-                            isActiveObj.isActive ? navActiveClass : navInactiveClass
-                        }
+                        className={isActiveObj => (isActiveObj.isActive ? navActiveClass : navInactiveClass)}
                     >
                         <HiOutlineInformationCircle className='text-xl' />
                         <span className='text-lg'>Help Desk</span>

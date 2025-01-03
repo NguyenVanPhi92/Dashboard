@@ -1,6 +1,6 @@
 import { AiOutlineExport } from 'react-icons/ai'
 import { HiOutlineChevronRight, HiOutlinePlus, HiOutlineSearch } from 'react-icons/hi'
-import { CategoryTable, Pagination, RowsPerPage, Sidebar, WhiteButton } from 'src/components'
+import { CategoryTable, Pagination, RowsPerPage, Sidebar, WhiteButton } from '@/components'
 
 const Categories = () => {
     return (
@@ -21,9 +21,7 @@ const Categories = () => {
                         <div className='flex gap-x-2 max-[370px]:flex-col max-[370px]:gap-2 max-[370px]:items-center'>
                             <button className='flex items-center justify-center w-32 py-2 text-lg duration-200 border border-gray-600 dark:bg-blackPrimary bg-whiteSecondary hover:border-gray-500 gap-x-2'>
                                 <AiOutlineExport className='text-base dark:text-whiteSecondary text-blackPrimary' />
-                                <span className='font-medium dark:text-whiteSecondary text-blackPrimary'>
-                                    Export
-                                </span>
+                                <span className='font-medium dark:text-whiteSecondary text-blackPrimary'>Export</span>
                             </button>
                             <WhiteButton
                                 link='/categories/create-category'

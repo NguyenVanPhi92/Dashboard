@@ -14,15 +14,16 @@ import { FaGithub } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 import { FaArrowRight } from 'react-icons/fa6'
 import { useState } from 'react'
-import ThirdPartyAuthButton from 'src/components/ThirdPartyAuthButton'
-import InputWithLabel from 'src/components/InputWithLabel'
-import SimpleInput from 'src/components/SimpleInput'
-import WhiteButton from 'src/components/WhiteButton'
+import ThirdPartyAuthButton from '@/components/ThirdPartyAuthButton'
+import InputWithLabel from '@/components/InputWithLabel'
+import SimpleInput from '@/components/SimpleInput'
+import WhiteButton from '@/components/WhiteButton'
 
 const RegisterComponent = () => {
     const [email, setEmail] = useState('john@email.com')
     const [password, setPassword] = useState('pass1234567890')
     const [confirmPassword, setConfirmPassword] = useState('pass1234567890')
+
     return (
         <div className='w-[500px] h-[800px] dark:bg-gray-900 bg-white flex flex-col justify-between items-center py-10 max-sm:w-[400px] max-[420px]:w-[320px] max-sm:h-[750px]'>
             <div className='flex flex-col items-center gap-10'>
@@ -48,7 +49,7 @@ const RegisterComponent = () => {
                             type='email'
                             placeholder='Enter a email...'
                             value={email}
-                            onChange={(e) => setEmail(e.target.value)}
+                            onChange={e => setEmail(e.target.value)}
                         />
                     </InputWithLabel>
 
@@ -57,7 +58,7 @@ const RegisterComponent = () => {
                             type='password'
                             placeholder='Enter a password...'
                             value={password}
-                            onChange={(e) => setPassword(e.target.value)}
+                            onChange={e => setPassword(e.target.value)}
                         />
                     </InputWithLabel>
 
@@ -66,18 +67,12 @@ const RegisterComponent = () => {
                             type='password'
                             placeholder='Confirm a password...'
                             value={confirmPassword}
-                            onChange={(e) => setConfirmPassword(e.target.value)}
+                            onChange={e => setConfirmPassword(e.target.value)}
                         />
                     </InputWithLabel>
                 </div>
 
-                <WhiteButton
-                    link='/login'
-                    textSize='lg'
-                    width='full'
-                    py='2'
-                    text='Register now'
-                ></WhiteButton>
+                <WhiteButton link='/login' textSize='lg' width='full' py='2' text='Register now'></WhiteButton>
                 <p className='flex items-center gap-1 text-base text-gray-700 transition-colors cursor-pointer dark:text-gray-400 max-sm:text-sm'>
                     Have an account?{' '}
                     <Link

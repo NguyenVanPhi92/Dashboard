@@ -19,6 +19,7 @@ import { useState } from 'react'
 export const LoginComponent = () => {
     const [email, setEmail] = useState('john@email.com')
     const [password, setPassword] = useState('pass1234567890')
+
     return (
         <div className='w-[500px] h-[750px] dark:bg-gray-900 bg-white flex flex-col justify-between items-center py-10 max-sm:w-[400px] max-[420px]:w-[320px] max-sm:h-[750px]'>
             <div className='flex flex-col items-center gap-10'>
@@ -28,7 +29,6 @@ export const LoginComponent = () => {
                 </h2>
                 <div className='flex gap-5'>
                     <ThirdPartyAuthButton>
-                        {' '}
                         <FaGoogle className='text-2xl max-sm:text-xl' />
                     </ThirdPartyAuthButton>
                     <ThirdPartyAuthButton>
@@ -39,36 +39,34 @@ export const LoginComponent = () => {
                 <p className='text-xl text-gray-700 dark:text-gray-400 max-sm:text-base'>OR</p>
 
                 <div className='flex flex-col w-full gap-5'>
+                    {/* Email */}
                     <InputWithLabel label='Email'>
                         <SimpleInput
                             type='email'
                             placeholder='Enter a email...'
                             value={email}
-                            onChange={(e) => setEmail(e.target.value)}
+                            onChange={e => setEmail(e.target.value)}
                         />
                     </InputWithLabel>
 
+                    {/* Password */}
                     <InputWithLabel label='Password'>
                         <SimpleInput
                             type='password'
                             placeholder='Enter a password...'
                             value={password}
-                            onChange={(e) => setPassword(e.target.value)}
+                            onChange={e => setPassword(e.target.value)}
                         />
                     </InputWithLabel>
                 </div>
                 <p className='text-base text-gray-700 transition-colors cursor-pointer dark:text-gray-400 dark:hover:text-gray-300 hover:text-gray-600 max-sm:text-sm'>
                     Forgot password?
                 </p>
-                <WhiteButton
-                    link='/'
-                    textSize='lg'
-                    width='full'
-                    py='2'
-                    text='Login now'
-                ></WhiteButton>
+
+                <WhiteButton link='/' textSize='lg' width='full' py='2' text='Login now' />
+
                 <p className='flex items-center gap-1 text-base text-gray-700 transition-colors cursor-pointer dark:text-gray-400 max-sm:text-sm'>
-                    Not registered yet?{' '}
+                    Not registered yet?
                     <Link
                         to='/register'
                         className='flex items-center gap-1 dark:text-whiteSecondary text-blackPrimary hover:text-black dark:hover:text-white max-sm:text-sm hover:underline'

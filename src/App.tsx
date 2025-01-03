@@ -22,8 +22,10 @@ import {
     Reviews,
     Users
 } from './pages'
-import Login from 'src/pages/login'
-import Register from 'src/pages/register'
+import Login from '@/pages/login'
+import Register from '@/pages/register'
+
+// tạo router cho ứng dụng
 const router = createBrowserRouter([
     {
         path: '/login',

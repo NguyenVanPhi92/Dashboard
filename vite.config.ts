@@ -12,7 +12,7 @@ export default defineConfig({
     // cấu hình cho terminal hiểu path
     resolve: {
         alias: {
-            src: path.resolve(__dirname, './src')
+            '@': path.resolve(__dirname, './src')
         }
     }
 })
